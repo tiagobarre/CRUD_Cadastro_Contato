@@ -1,0 +1,12 @@
+C:\Curso\TesteBelt\CRUD.contato\BLL\bin\Debug\netcoreapp3.1\BLL.deps.json
+C:\Curso\TesteBelt\CRUD.contato\BLL\bin\Debug\netcoreapp3.1\BLL.dll
+C:\Curso\TesteBelt\CRUD.contato\BLL\bin\Debug\netcoreapp3.1\BLL.pdb
+C:\Curso\TesteBelt\CRUD.contato\BLL\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Curso\TesteBelt\CRUD.contato\BLL\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Curso\TesteBelt\CRUD.contato\BLL\obj\Debug\netcoreapp3.1\BLL.csprojAssemblyReference.cache
+C:\Curso\TesteBelt\CRUD.contato\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfoInputs.cache
+C:\Curso\TesteBelt\CRUD.contato\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfo.cs
+C:\Curso\TesteBelt\CRUD.contato\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CoreCompileInputs.cache
+C:\Curso\TesteBelt\CRUD.contato\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CopyComplete
+C:\Curso\TesteBelt\CRUD.contato\BLL\obj\Debug\netcoreapp3.1\BLL.dll
+C:\Curso\TesteBelt\CRUD.contato\BLL\obj\Debug\netcoreapp3.1\BLL.pdb

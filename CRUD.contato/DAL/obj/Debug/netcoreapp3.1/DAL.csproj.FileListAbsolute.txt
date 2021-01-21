@@ -1,0 +1,9 @@
+C:\Curso\TesteBelt\CRUD.contato\DAL\bin\Debug\netcoreapp3.1\DAL.deps.json
+C:\Curso\TesteBelt\CRUD.contato\DAL\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Curso\TesteBelt\CRUD.contato\DAL\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Curso\TesteBelt\CRUD.contato\DAL\obj\Debug\netcoreapp3.1\DAL.csprojAssemblyReference.cache
+C:\Curso\TesteBelt\CRUD.contato\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfoInputs.cache
+C:\Curso\TesteBelt\CRUD.contato\DAL\obj\Debug\netcoreapp3.1\DAL.AssemblyInfo.cs
+C:\Curso\TesteBelt\CRUD.contato\DAL\obj\Debug\netcoreapp3.1\DAL.csproj.CoreCompileInputs.cache
+C:\Curso\TesteBelt\CRUD.contato\DAL\obj\Debug\netcoreapp3.1\DAL.dll
+C:\Curso\TesteBelt\CRUD.contato\DAL\obj\Debug\netcoreapp3.1\DAL.pdb

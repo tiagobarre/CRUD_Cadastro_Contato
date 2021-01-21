@@ -1,0 +1,116 @@
+﻿
+
+@model CRUD.contato.Models.ContatoModel
+
+
+<div class="container" style="max-width: 800px;text-align:center; ">
+    <div class="card container-fluid" style="        margin-top: 100px;
+         border-radius: 10px;
+         border-color:black
+         padding-bottom: 10px;
+         -webkit-box-shadow: 11px 13px 17px -5px rgba(0,0,0,0.75);
+         -moz-box-shadow: 11px 13px 17px -5px rgba(0,0,0,0.75);
+         box-shadow: 11px 13px 17px -5px rgba(0,0,0,0.75);
+         ">
+        <form class="container">
+            <br />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
+            </svg>
+            <strong>Novo Contato</strong>
+            <hr style="border-color:black" />
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label" style="font-size:14px"><strong style="color:red">*</strong> Nome</label>
+                <div class="col-sm-10">
+                    <input asp-for="nome" type="text" class="form-control form-control-sm" maxlength="100" required >
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label" style="font-size:14px"><strong style="color:red">*</strong> Telefone Res </label>
+                <div class="col-sm-10">
+                    <input asp-for="telefone" type="text" class="form-control form-control-sm" id="phone" onkeypress="mask(this, mphone);"
+                           onblur="mask(this, mphone);" maxlength="14"
+                           required >
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label" style="font-size:14px">Celular</label>
+                <div class="col-sm-10">
+                    <input asp-for="celular" type="text" class="form-control form-control-sm" id="phone" onkeypress="mask(this, mphone);"
+                           onblur="mask(this, mphone);" maxlength="15">
+                </div>
+            </div>
+
+
+            <button class="btn btn-outline-primary" type="submit">Adicionar</button>
+        </form>
+        <br />
+
+        <table class="table table-hover">
+            <thead style="font-size:12px">
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Celular</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Excluir</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in (List<CRUD.contato.Models.ContatoModel>)ViewBag.ListarContatos)
+                {
+                    <tr style="font-size:12px">
+                        <td>@item.nome</td>
+                        <td>@item.celular</td>
+                        <td>@item.telefone</td>
+                        <td>
+                           
+                                <a type="submit" class="btn btn-danger" style="font-size:11px" href="/home/deletar/@item.id">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                    </svg>
+                                </a>
+                            
+                          
+                        </td>
+                    </tr>
+
+                }
+
+
+
+            </tbody>
+        </table>
+
+     
+
+    </div>
+</div>
+
+
+<script>
+    function mask(o, f) {
+        setTimeout(function () {
+            var v = mphone(o.value);
+            if (v != o.value) {
+                o.value = v;
+            }
+        }, 1);
+    }
+
+    function mphone(v) {
+        var r = v.replace(/\D/g, "");
+        r = r.replace(/^0/, "");
+        if (r.length > 10) {
+            r = r.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
+        } else if (r.length > 5) {
+            r = r.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+        } else if (r.length > 2) {
+            r = r.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
+        } else {
+            r = r.replace(/^(\d*)/, "($1");
+        }
+        return r;
+    }
+</script>
+
